@@ -1,4 +1,4 @@
-# zju-health-report-action-demo (ZHR demo)
+# zhr-action-demo
 
 <p align="center" style="display: flex; justify-content: space-between; align-items: center;">
 <img src="https://github.githubassets.com/images/modules/site/features/actions-icon-actions.svg" alt="github-actions-logo" height="200" style="padding: 20px 20px 20px; display: inline-block; box-sizing: border-box;"></img>
@@ -14,6 +14,8 @@
 1. 直接 Fork 本仓库
 
 2. 配置帐号（必须）
+
+   Settings > Actions > General > Workflow permissions，改为 Read and write permissions，这样 Monthly Update Action 才能拥有更新仓库的权限，Monthly Update Action 每月运行一次，会向仓库添加一个新的 commit，是用来防止因为仓库长时间不活跃，而被 GitHub 自动禁用 Actions。
 
    Settings > Secrets > Actions > New repository secret， 添加 `ZJU_USERNAME`，内容为浙大通行证账号（学号），添加`ZJU_PASSWORD`，内容为浙大通行证密码。
 
@@ -50,6 +52,8 @@
    ```
 
 6. 测试
+
+   Actions > I understand my workflows, go ahead and enable them
 
    Actions > @zju-health-report/action Demo > Enable workflow > Run workflow。
 
